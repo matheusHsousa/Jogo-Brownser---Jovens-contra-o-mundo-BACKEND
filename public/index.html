@@ -1,0 +1,126 @@
+<!-- Seu HTML completo -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seu Jogo</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="borda">
+      <img
+        class="image-icon"
+        src="./img/Mouse Pad Cartas Baralho Naipes Preto.png"
+        alt=""
+      />
+
+      <div id="entradaPagina">
+        <div class="border-right">
+          <div id="big-lobby">
+            <label class="nome" for="nomeUsuario"
+              >ESCOLHA UM AVATAR E UM NICKNAME</label
+            >
+            <div id="iconeGrid">
+              <img
+                class="perfil"
+                src="./img/bicho.png"
+                alt="Ícone 1"
+                onclick="selecionarIcone('bicho')"
+              />
+              <img
+                class="perfil"
+                src="./img/buda.png"
+                alt="Ícone 2"
+                onclick="selecionarIcone('buda')"
+              />
+              <img
+                class="perfil"
+                src="./img/fantom.png"
+                alt="Ícone 3"
+                onclick="selecionarIcone('fantom')"
+              />
+              <img
+                class="perfil"
+                src="./img/indio.png"
+                alt="Ícone 4"
+                onclick="selecionarIcone('indio')"
+              />
+              <img
+                class="perfil"
+                src="./img/ogro.png"
+                alt="Ícone 5"
+                onclick="selecionarIcone('ogro')"
+              />
+              <img
+                class="perfil"
+                src="./img/fro.png"
+                alt="Ícone 5"
+                onclick="selecionarIcone('fro')"
+              />
+              <img
+                class="perfil"
+                src="./img/pika.png"
+                alt="Ícone 5"
+                onclick="selecionarIcone('pika')"
+              />
+              <img
+                class="perfil"
+                src="./img/virus.png"
+                alt="Ícone 6"
+                onclick="selecionarIcone('virus')"
+              />
+            </div>
+            <div id="iconeSelecionado">
+              <img
+                class="perfil"
+                src="./img/${iconeSelecionado}.png"
+                alt="Ícone Selecionado"
+              />
+            </div>
+            <input type="text" id="nomeUsuario" />
+            <div class="name">
+              <label for="codigoEntrada">Código da Sala:</label>
+              <input type="text" id="codigoEntrada" />
+              <button class="width-button" onclick="entrarComCodigo()">
+                Entrar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="big-lobby" class="big-lobby">
+          <p class="d-none">OU</p>
+          <button onclick="criarSala()" class="width-button">Criar Sala</button>
+        </div>
+      </div>
+
+      <div id="sala" style="display: none">
+        <div id="sala-actions">
+          <p>Presentes: <span id="contadorPresentes">0</span></p>
+          <p>Código da Sala: <span id="codigoSala"></span></p>
+
+          <div class="margin-top">
+            <button id="botaoCopiar">Copiar link</button>
+            <button onclick="sairDaSala()">Sair da Sala</button>
+            <button id="initGame" onclick="initGame()">inicar jogo</button>
+          </div>
+        </div>
+
+        <div id="listaUsuarios" class="usuarios-container"></div>
+      </div>
+      <div id="fraseUnica"></div>
+    </div>
+
+    <div id="jogo" style="display: none" class="jogo"></div>
+
+    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
+    <script src="cliente.js"></script>
+  </body>
+</html>

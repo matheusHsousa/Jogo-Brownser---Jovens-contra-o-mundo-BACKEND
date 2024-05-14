@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seu Jogo</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="borda">
+      <img
+        class="image-icon"
+        src="./img/Mouse Pad Cartas Baralho Naipes Preto.png"
+        alt=""
+      />
+
+      <button onclick="sairDaSala()">Sair da Sala</button>
+      <p>Código da Sala: <span id="codigoSala"></span></p>
+      <div id="listaUsuarios"></div>
+      <p>Presentes: <span id="contadorPresentes">0</span></p>
+    </div>
+
+    <script src="js/cliente.js"></script>
+  </body>
+</html>

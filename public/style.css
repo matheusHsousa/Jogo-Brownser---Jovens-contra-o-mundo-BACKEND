@@ -1,0 +1,320 @@
+body {
+  background: linear-gradient(-45deg, #9b9999, #1d1c1c, #313131, #353535);
+    background-size: 400% 400%;
+    animation: gradient 15seaseinfinite;
+    height: 100vh;
+
+  color: #fff;
+  font-family: "Archivo Black", sans-serif;
+  padding-top: 2px;
+}
+
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.borda {
+  border: 4px rgba(29, 29, 27, 0.15) solid;
+  box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.15),
+    0px 3px 0px 0px rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  margin: 30px 100px;
+  padding: 30px;
+}
+
+img.image-icon {
+  width: 300px;
+  height: 200px;
+  margin-top: -65px;
+  margin-bottom: 40px;
+}
+
+#lobby {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #056500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #022f00;
+}
+
+input {
+  height: 45px;
+  border-radius: 15px;
+  background: #ffffff21;
+  border: solid 1px #fff;
+  color: #fff;
+  margin: 3px 0px;
+  font-size: 18px;
+  padding: 15px;
+  font-family: "Archivo Black", sans-serif;
+  text-align: center;
+}
+
+
+.usuario {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#entradaPagina {
+  background-color: #0000004d;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.cartinha {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  height: 200px;
+  flex-shrink: 0;
+  transition: all 0.3s; 
+}
+
+.cartinha.preta {
+  background-color: rgb(24, 24, 24);
+  color: white;
+  width: 150px;
+  height: 200px;
+}
+
+.cartinha button {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#fraseUnica{
+  display: flex;
+  justify-content: center;
+}
+
+.cartinha:hover {
+  border: 2px solid green;
+  transform: scale(1.05); 
+}
+
+.jogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 100px;
+}
+
+.perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid #940303;
+}
+
+.usuarios-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(27, 27, 27, 0.542);
+  border-radius: 10px;
+}
+
+.perfil-sala{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #056500;
+}
+
+.perfil:hover{
+  border: 2px solid #056500;
+}
+
+#iconeSelecionado img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: #3a3939;
+  border: 4px solid #056500;
+}
+
+.border-right {
+  border-right: 3px solid #fff;
+  width: 50%;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nomeUsuario {
+  width: 100%;
+}
+
+#codigoEntrada {
+  width: 100%;
+}
+
+.width-button {
+  width: 140px;
+  height: 54px;
+  margin-top: 10px;
+}
+
+#lobby {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-around;
+}
+
+.big-lobby{
+  width: 50%;
+}
+
+.d-none{
+  display: none;
+}
+
+.margin-top{
+  margin: 20px;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .big-lobby{
+    width: auto;
+  }
+
+  .borda {
+    margin: 10px;
+    padding: 0px;
+  }
+
+  .jogo{
+    margin: 0px;
+  }
+
+  img.image-icon{
+    margin-bottom: 20px;
+    margin-top: -55px;
+  }
+
+  #codigoEntrada{
+    margin: 10px 0px 20px;
+  }
+
+  .d-none{
+    display: block;
+    margin: 10px;
+  }
+
+  .border-right {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    align-items: center;
+    border: none;
+    padding: 20px 20px 0px 20px;
+  }
+
+  .width-button{
+    margin: 0;
+  }
+
+  .perfil{
+    width: 30px;
+    height: 30px;
+  }
+
+  #iconeGrid{
+    display: none;
+    flex-direction: column;
+
+  }
+
+  #entradaPagina {
+    margin: 0px 20px 20px 20px; 
+    flex-direction: column;
+  }
+
+  .width-button {
+    height: 44px;
+  }
+
+  #iconeSelecionado img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #lobby {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+}
+
+.perfil {
+  transition: border-color 0.3s ease-in-out;
+}
+
+.perfil.selecionado {
+  border-color: green; 
+}
